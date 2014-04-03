@@ -23,7 +23,7 @@ public class UserDAO implements UserDAOInterface{
 	@SuppressWarnings("unchecked")
 	public List<UserEntity> getAllUsers() {
 		List<UserEntity> customers = new ArrayList<UserEntity>();
-		Query query = em.createNamedQuery("Select u from user u");
+		Query query = em.createNamedQuery("UserEntity.findAll");
 		customers = query.getResultList();
 		return customers;
 	}

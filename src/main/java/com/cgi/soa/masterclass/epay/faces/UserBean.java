@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -27,11 +28,22 @@ public class UserBean implements Serializable {
 		users = new ArrayList<UserEntity>();
 		user = new UserEntity();
 	}
+	
+	@PostConstruct
+	private void init(){
+		updateUsers();
+	}
 
 	public String createUser(){
 		userAccess.createUser(user);
+		updateUsers();
 		return "/users/index";
 	}
+	
+	private void updateUsers(){
+		users = userAccess.getAllUsers();
+	}
+	
 	public List<UserEntity> getUsers() {
 		return users;
 	}
