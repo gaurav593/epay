@@ -1,5 +1,5 @@
 
-package com.cgi.soa.masterclass.epay.MeinBank.ws;
+package com.cgi.soa.masterclass.epay.meinbank.ws;
 
 import java.net.MalformedURLException;
 import java.net.URL;

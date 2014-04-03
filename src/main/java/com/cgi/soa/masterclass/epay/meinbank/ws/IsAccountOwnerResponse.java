@@ -1,5 +1,5 @@
 
-package com.cgi.soa.masterclass.epay.MeinBank.ws;
+package com.cgi.soa.masterclass.epay.meinbank.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for isAccountExistResponse complex type.
+ * <p>Java class for isAccountOwnerResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="isAccountExistResponse">
+ * &lt;complexType name="isAccountOwnerResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "isAccountExistResponse", propOrder = {
+@XmlType(name = "isAccountOwnerResponse", propOrder = {
     "_return"
 })
-public class IsAccountExistResponse {
+public class IsAccountOwnerResponse {
 
     @XmlElement(name = "return")
     protected boolean _return;

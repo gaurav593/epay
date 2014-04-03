@@ -1,5 +1,5 @@
 
-package com.cgi.soa.masterclass.epay.MeinBank.ws;
+package com.cgi.soa.masterclass.epay.meinbank.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

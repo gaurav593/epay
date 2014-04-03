@@ -1,7 +1,8 @@
 
-package com.cgi.soa.masterclass.epay.MeinBank.ws;
+package com.cgi.soa.masterclass.epay.meinbank.ws;
 
 import java.math.BigDecimal;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -33,8 +34,8 @@ public interface BankWeb {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "transfer", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.Transfer")
-    @ResponseWrapper(localName = "transferResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.TransferResponse")
+    @RequestWrapper(localName = "transfer", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.Transfer")
+    @ResponseWrapper(localName = "transferResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.TransferResponse")
     @Action(input = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/transferRequest", output = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/transferResponse")
     public void transfer(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -55,8 +56,8 @@ public interface BankWeb {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "isBalanceCovered", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsBalanceCovered")
-    @ResponseWrapper(localName = "isBalanceCoveredResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsBalanceCoveredResponse")
+    @RequestWrapper(localName = "isBalanceCovered", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsBalanceCovered")
+    @ResponseWrapper(localName = "isBalanceCoveredResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsBalanceCoveredResponse")
     @Action(input = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isBalanceCoveredRequest", output = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isBalanceCoveredResponse")
     public boolean isBalanceCovered(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -72,8 +73,8 @@ public interface BankWeb {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "isAccountExist", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsAccountExist")
-    @ResponseWrapper(localName = "isAccountExistResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsAccountExistResponse")
+    @RequestWrapper(localName = "isAccountExist", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsAccountExist")
+    @ResponseWrapper(localName = "isAccountExistResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsAccountExistResponse")
     @Action(input = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isAccountExistRequest", output = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isAccountExistResponse")
     public boolean isAccountExist(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -89,8 +90,8 @@ public interface BankWeb {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "isAccountOwner", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsAccountOwner")
-    @ResponseWrapper(localName = "isAccountOwnerResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.MeinBank.ws.IsAccountOwnerResponse")
+    @RequestWrapper(localName = "isAccountOwner", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsAccountOwner")
+    @ResponseWrapper(localName = "isAccountOwnerResponse", targetNamespace = "http://ws.samplebank.masterclass.soa.cgi.com/", className = "com.cgi.soa.masterclass.epay.meinbank.ws.IsAccountOwnerResponse")
     @Action(input = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isAccountOwnerRequest", output = "http://ws.samplebank.masterclass.soa.cgi.com/BankWeb/isAccountOwnerResponse")
     public boolean isAccountOwner(
         @WebParam(name = "arg0", targetNamespace = "")
