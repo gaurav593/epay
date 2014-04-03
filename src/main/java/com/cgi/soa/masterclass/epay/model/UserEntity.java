@@ -1,6 +1,7 @@
 package com.cgi.soa.masterclass.epay.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 @Entity
 @NamedQueries({
@@ -27,6 +29,8 @@ public class UserEntity implements Serializable {
 	private String accFirstName;
 	private String accLastName;
 	private double balance;
+	@OneToMany(mappedBy="sender")
+	private List<TransactionEntity> transactions;
 	
 	public int getUserID() {
 		return userID;
@@ -75,6 +79,12 @@ public class UserEntity implements Serializable {
 	}
 	public void setBalance(double balance) {
 		this.balance = balance;
+	}
+	public List<TransactionEntity> getTransactions() {
+		return transactions;
+	}
+	public void setTransactions(List<TransactionEntity> transactions) {
+		this.transactions = transactions;
 	}
 	
 }
