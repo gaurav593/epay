@@ -100,8 +100,9 @@ body {
 				<ui:repeat var="t" value="#{transactionBean.user.transactions}">
 					<tr>
 						<td>#{t.transactionID}</td>
-						<td>#{t.transDateD}</td>
-						<td>#{t.sender.getFirstName} #{t.sender.getLastName} #{t.recipient.getFirstName} #{t.recipient.getLastName}</td>
+						<td>#{t.transDate}</td>
+						<td>#{t.sender.getFirstName} #{t.sender.getLastName}
+							#{t.recipient.getFirstName} #{t.recipient.getLastName}</td>
 						<td>#{t.purpose}</td>
 						<td align="right">#{t.fee.amount}</td>
 						<td align="right">#{t.amount}</td>

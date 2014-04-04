@@ -8,4 +8,5 @@ public interface UserDAOInterface {
 	public void createUser(UserEntity user);
 	public List<UserEntity> getAllUsers();
 	public UserEntity getUserByID(int ID);
+	public void updateUser(UserEntity user);
 }

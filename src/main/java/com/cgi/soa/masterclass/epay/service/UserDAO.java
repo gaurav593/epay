@@ -35,4 +35,8 @@ public class UserDAO implements UserDAOInterface{
 		return user;
 	}
 
+	public void updateUser(UserEntity user) {
+		em.merge(user);		
+	}
+
 }
