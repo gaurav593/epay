@@ -88,7 +88,7 @@ body {
 						<td>#{u.accFirstName}</td>
 						<td>#{u.accLastName}</td>
 						<td align="right">#{u.balance}</td>
-						<td><a jsf:outcome="/transactions/index.xhtml">Transactions</a></td>
+						<td><a jsf:outcome="/transactions/index.xhtml?userID=#{u.userID}">Transactions</a></td>
 					</tr>
 				</ui:repeat>
 			</tbody>

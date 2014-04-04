@@ -28,4 +28,11 @@ public class UserDAO implements UserDAOInterface{
 		return customers;
 	}
 
+	public UserEntity getUserByID(int ID) {
+		UserEntity user = new UserEntity();
+		Query query = em.createNamedQuery("UserEntity.findUserByID").setParameter("userID", ID);
+		user = (UserEntity)query.getResultList().get(0);
+		return user;
+	}
+
 }

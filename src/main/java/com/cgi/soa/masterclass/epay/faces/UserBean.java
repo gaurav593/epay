@@ -37,9 +37,9 @@ public class UserBean implements Serializable {
 		users = new ArrayList<UserEntity>();
 		user = new UserEntity();
 	}
-
+	
 	@PostConstruct
-	private void init() {
+	public void init(){
 		updateUsers();
 	}
 
