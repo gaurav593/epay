@@ -37,9 +37,11 @@ public class TransactionBean implements Serializable {
 	}
 
 	public String depositTransaction() {
-		if (service.getWebService().isBalanceCovered(2,
+		if (service.getWebService().isBalanceCovered(
+				(Integer) user.getAccNumber(),
 				new BigDecimal(transaction.getAmount()))) {
-			service.getWebService().transfer(48, 2, transaction.getPurpose(),
+			service.getWebService().transfer(48, user.getAccNumber(),
+					transaction.getPurpose(),
 					new BigDecimal(transaction.getAmount()));
 			FeeEntity fee = new FeeEntity();
 			fee.setAmount(0);
